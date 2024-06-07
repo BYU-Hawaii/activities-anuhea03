@@ -14,7 +14,7 @@ html {
     background-color: #627da7;
     color: #fff;
     padding: 20px;
-    text-align: left;
+    text-align: center;
     font-family: "Pirata One", system-ui;
     font-weight: 400;
     font-style: normal;
@@ -83,3 +83,5 @@ html {
   .bullets{
     list-style-image: url("/images/bullet.png");
   }
+
+ 
