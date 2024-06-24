@@ -11,8 +11,9 @@ body {
 }
 
 img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
+    
 }
   
 .homeheader {
@@ -80,7 +81,7 @@ li a:hover {
 section {
     border: 1px solid black;
     padding: 25px;
-    margin: 25px 50px 75px;
+    margin: 25px;
     border-radius: 8px;
 }
   
@@ -90,23 +91,22 @@ section {
 
 /* COLUMNS */
 .column {
-    width: 100%;
-    padding: 0;
+    float: left;
+    width: 50%;
     padding: 10px;
-    
+}
+
+.row:after {
+    display: table;
 }
 
 .card {
+    display: block;
     background-color: white;
     padding: 20px;
     margin-top: 20px;
     border: 2px solid black;
     border-radius: 12px;
-}
-
-.row:after {
-    display: table;
-    clear: both
 }
 
 .font1{

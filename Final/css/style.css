@@ -53,7 +53,11 @@ li a:hover {
 
 .header {
     grid-area: header;
-    background-color: rgb(154, 241, 241);
+    background-color: rgb(241, 213, 154);
+    font-family: "Homemade Apple", cursive;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
 }
 
 .sidebar {
@@ -99,4 +103,10 @@ li a:hover {
         gap: 10px;
         padding: 20px;
     }
+}
+
+canvas {
+    border: 1px solid black;
+    display: block;
+    margin: 0 auto;
 }
