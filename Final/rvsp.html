@@ -17,22 +17,34 @@
 
     <div class="sidebar">
         <ul class="menu-bar">
-            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="invitations.html">Invitations</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="registry.html">Registry</a></li>
-            <li><a href="rvsp.html">RSVP</a></li>
+            <li><a class="active" href="rvsp.html">RSVP</a></li>
         </ul>
     </div>
 
     <main class="main">
-        <div class="image-container">
-            <img src="images/background.png" alt="Emily and Lucky in field">
+        <div class="centered-container">
+            <div class="form-container">
+                <h2>Event Registration</h2>
+                <form id="eventForm" onsubmit="return validateForm()" method="post">
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" name="name"><br><br>
+                    <label for="address">Address:</label><br>
+                    <input type="text" id="address" name="address"><br><br>
+                    <label for="guests">Number of Guests:</label><br>
+                    <input type="number" id="guests" name="guests" min="1"><br><br>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
         </div>
     </main>
-
+    
     <div class="footer">
         &copy; Anuhea Anderson 2024 
     </div>
+    <script src="scripts/scripts.js"></script>
 </body>
 </html>
