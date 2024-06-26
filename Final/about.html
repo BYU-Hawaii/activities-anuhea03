@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <title>Pictures</title>
+    <title>About</title>
 </head>
 <body class="grid-container-body">
     <header class="header">
@@ -18,22 +18,22 @@
     <div class="sidebar">
         <ul class="menu-bar">
             <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
+            <li><a class="active" href="about.html">About</a></li>
             <li><a href="registry.html">Registry</a></li>
             <li><a href="rvsp.html">RSVP</a></li>
-            <li><a class="active" href="pictures.html">Pictures</a></li>
+            <li><a href="pictures.html">Pictures</a></li>
         </ul>
     </div>
 
     <main class="main">
-        <h4>We want to see all the videos and pictures you all have taken!</h4>
-        <div class="drop-zone">
-            <h2>Upload Them Here!</h2>
-            <form id="uploadForm">
-            <input type="file" id="fileInput" required>
+        <div class="gallery-container">
+            <div class="gallery-slider">
+                <img src="image1.jpg" alt="Image 1">
+                <img src="image2.jpg" alt="Image 2">
+                <img src="image3.jpg" alt="Image 3">
+                <!-- Add more images as needed -->
+            </div>
         </div>
-        <button type="button" id="uploadButton">Upload</button>
-        <div id="thankYouMessage" class="thank-you-message">Thank you!</div>
     </main>
 
     <div class="footer">

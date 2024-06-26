@@ -45,3 +45,20 @@ document.getElementById('uploadButton').addEventListener('click', function() {
         alert('Please choose a file before uploading.');
     }
 });
+
+
+const gallerySlider = document.querySelector('.gallery-slider');
+const galleryImages = document.querySelectorAll('.gallery-slider img');
+
+let currentIndex = 0;
+const totalImages = galleryImages.length;
+
+// Clone the first and last images for seamless scrolling
+const firstClone = galleryImages[0].cloneNode(true);
+const lastClone = galleryImages[totalImages - 1].cloneNode(true);
+
+gallerySlider.appendChild(firstClone);
+gallerySlider.insertBefore(lastClone, galleryImages[0]);
+
+// Adjust slider width based on total images
+gallerySlider.style.width = `${100 * (totalImages + 2)}

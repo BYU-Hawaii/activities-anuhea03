@@ -108,7 +108,7 @@ body {
 }
 
 .centered-container {
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
     height: 100%;
@@ -117,7 +117,6 @@ body {
 .form-container {
     width: 300px;
     padding: 20px;
-    
 }
 
 .countdown-container {
@@ -160,7 +159,7 @@ body {
     max-width: 500px;
     height: 200px;
     padding: 25px;
-    border: 4px dashed #009578;
+    border: 4px dashed #156507;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -168,13 +167,9 @@ body {
     cursor: pointer;
 }
 
-.drop-zone.is-dragover {
-    background-color: #ececec;
-}
-
 .thank-you-message {
     display: none;
-    color: green;
+    color: rgb(0, 0, 0);
     font-size: 18px;
     margin-top: 10px;
 }
@@ -182,3 +177,21 @@ body {
 h4 {
     text-align: center;
 }
+
+.gallery-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.gallery-slider {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.gallery-slider img {
+    height: 100%;
+    width: auto;
+    object-fit: contain; /* Ensure images fit within their containers */
+}
+
