@@ -46,19 +46,32 @@ document.getElementById('uploadButton').addEventListener('click', function() {
     }
 });
 
+const imageWrapper = document.querySelector('.image-wrapper');
+const imageItems = document.querySelectorAll('.image-wrapper > div');
+const imageLength = imageItems.length;
+const perView = 3;
+let totalScroll = 0;
+const delay = 2000;
 
-const gallerySlider = document.querySelector('.gallery-slider');
-const galleryImages = document.querySelectorAll('.gallery-slider img');
+imageWrapper.style.setProperty('--per-view', perView);
 
-let currentIndex = 0;
-const totalImages = galleryImages.length;
+// Adjust insertion logic to match perView
+for (let i = 0; i < perView; i++) {
+    imageWrapper.insertAdjacentHTML('beforeend', imageItems[i].outerHTML);
+}
 
-// Clone the first and last images for seamless scrolling
-const firstClone = galleryImages[0].cloneNode(true);
-const lastClone = galleryImages[totalImages - 1].cloneNode(true);
+let autoScroll = setInterval(scrolling, delay);
 
-gallerySlider.appendChild(firstClone);
-gallerySlider.insertBefore(lastClone, galleryImages[0]);
-
-// Adjust slider width based on total images
-gallerySlider.style.width = `${100 * (totalImages + 2)}
+function scrolling() {
+    totalScroll++;
+    if (totalScroll === imageLength + 1) {
+        clearInterval(autoScroll);
+        totalScroll = 1;
+        imageWrapper.style.transition = '0s';
+        imageWrapper.style.left = '0';
+        autoScroll = setInterval(scrolling, delay);
+    }
+    const widthEl = document.querySelector('.image-wrapper > div').offsetWidth + 24;
+    imageWrapper.style.left = `-${totalScroll * widthEl}px`;
+    imageWrapper.style.transition = '.3s';
+}

@@ -91,6 +91,7 @@ body {
     .menu-bar li a {
         float: left;
     }
+    
 }
 
 .image-container {
@@ -121,6 +122,7 @@ body {
 
 .countdown-container {
     text-align: center;
+    padding: 30px;
 }
 
 .card-container {
@@ -176,22 +178,55 @@ body {
 
 h4 {
     text-align: center;
+    padding: 20px;
+    margin: 0 2em;
 }
 
-.gallery-container {
-    width: 100%;
-    overflow: hidden;
+.font1{
+    font-family: "Homemade Apple", cursive;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    margin-top: 20px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.imagecontainer {
+    display: block;
+    overflow-x: hidden;
+    max-width: 768px;
+    justify-content: center;
+    margin: auto;
+}
+
+.image-wrapper {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% - (1.5rem * (var(--per-view) - 1))) / var(--per-view));
+    grid-gap: 1.5rem;
     position: relative;
+    left: 0;
+    transition: .3s;
 }
 
-.gallery-slider {
-    display: flex;
-    transition: transform 0.5s ease;
+.image-wrapper > * {
+    aspect-ratio: 4 / 3;
 }
 
-.gallery-slider img {
-    height: 100%;
-    width: auto;
-    object-fit: contain; /* Ensure images fit within their containers */
+.image-wrapper img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    border-radius: .5rem;
+}
+
+.fit{
+    margin: 40px;
 }
 
