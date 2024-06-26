@@ -16,7 +16,7 @@ function validateForm() {
 
 function displayThankYou() {
     var formElement = document.getElementById('eventForm');
-    formElement.innerHTML = '<h3>Thank you for registering!</h3><p>We look forward to seeing you at the event.</p>';
+    formElement.innerHTML = '<h3>Thank you for registering!</h3><p>We look forward to seeing you at our wedding!</p>';
 }
 
 function updateCountdown() {
@@ -37,4 +37,11 @@ function updateCountdown() {
 
 const interval = setInterval(updateCountdown, 1000); // Update every second
 
-
+document.getElementById('uploadButton').addEventListener('click', function() {
+    var fileInput = document.getElementById('fileInput');
+    if (fileInput.files.length > 0) {
+        document.getElementById('thankYouMessage').style.display = 'block';
+    } else {
+        alert('Please choose a file before uploading.');
+    }
+});
