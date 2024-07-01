@@ -1,0 +1,149 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+  
+body {
+    background-color: #f2f2f2;
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.footer {
+    background-color:#627da7;
+    padding: 10px;
+    text-align: center;
+    grid-area: footer;
+}
+
+.nav{
+    grid-area: nav;
+}
+
+.main{
+    grid-area: main;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+  
+.homeheader {
+    background-color: #627da7;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-family: "Pirata One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.header{
+    grid-area: header;
+}
+  
+.menu-bar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #8498b8;
+    top: 0;
+    font-family: "Major Mono Display", monospace;
+    font-weight: 400;
+}
+  
+.menu-bar li a {
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menu-bar li {
+    text-align: center;
+}
+  
+li a:hover {
+    background-color: #627da7;
+    color: white;
+}
+  
+.active {
+    background-color: #536f9d;
+}
+  
+section {
+    border: 1px solid black;
+    padding: 25px;
+    margin: 5% 0;
+    border-radius: 8px;
+    text-indent: 25px;
+}
+
+.column{
+    width: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.font1{
+    font-family: "Major Mono Display", monospace;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+}
+
+.grid-container-body {
+    display: grid;
+    grid-template-areas:
+        "nav"
+        "main"
+        "header"
+        "footer";
+    gap: 10px;
+    padding: 20px;
+}
+
+@media (min-width: 768px){
+    .column {
+        float: left;
+        width: 50%;
+        padding: 5px;
+    }
+    .menu-bar li {
+        float: left;
+    }
+    .grid-container-body {
+        display: grid;
+        grid-template-areas:
+            "header"
+            "nav"
+            "main"
+            "footer";
+        gap: 10px;
+        padding: 20px;
+    }
+}
+
+@media (min-width: 1024px){
+    .column {
+        float: left;
+        width: 33.33%;
+        padding: 5px;
+    }
+    .menu-bar li {
+        float: left;
+    }
+}
