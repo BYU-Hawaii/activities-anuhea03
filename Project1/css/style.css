@@ -13,7 +13,6 @@ body {
 img {
     width: 100%;
     height: auto;
-    
 }
   
 .homeheader {
@@ -34,6 +33,7 @@ img {
     background-color: #8498b8;
     top: 0;
     font-family: "Major Mono Display", monospace;
+    font-weight: 400;
 }
   
 .menu-bar li {
@@ -90,23 +90,10 @@ section {
 }
 
 /* COLUMNS */
-.column {
-    float: left;
-    width: 50%;
-    padding: 10px;
-}
-
-.row:after {
-    display: table;
-}
-
-.card {
-    display: block;
-    background-color: white;
-    padding: 20px;
-    margin-top: 20px;
-    border: 2px solid black;
-    border-radius: 12px;
+.container {
+    width: 300px;
+    background-color: #ffcc33;
+    margin: auto;
 }
 
 .font1{
