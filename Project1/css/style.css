@@ -65,7 +65,7 @@ li a:hover {
 }
   
 .backgroundimg {
-    background-image: url("/Project1/images/laiepoint.JPG");
+    background-image: url("images/laiepoint.JPG");
     height: 500px;
     background-position: center;
     background-repeat: no-repeat;
