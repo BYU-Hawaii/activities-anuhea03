@@ -1,0 +1,38 @@
+body {
+  background-color: #f5f3f0;
+  font-family: 'Times New Roman', Times, serif;
+  margin: 10px;
+  padding: 10px;
+}
+
+.headers {
+  background-color: #fcd89a;
+  padding: 10px;
+  text-align: center;
+  border: 5px solid #ebc075;
+  font-family: "Rubik Scribble", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.align {
+  text-align: center;
+}
+
+.image {
+  border: 5px solid #ebc075;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  display: block;
+}
+
+.blockq {
+  padding: 5px;
+  border: 5px solid #ebc075;
+}
+
+#bolder {
+  font-size: 16px;
+  font-weight: bold;
+}
